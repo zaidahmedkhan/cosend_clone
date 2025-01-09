@@ -19,7 +19,7 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           children: [
             const CustomTextfield(
-              hintText: "   Enter your name",
+              hintText: "Enter your name",
               prefixIconPath: AppImages.personIcon,
               borderRadius: 6,
             ),

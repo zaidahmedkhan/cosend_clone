@@ -12,36 +12,62 @@ class BirthdayTextField extends StatelessWidget {
       height: 78,
       decoration: BoxDecoration(
           border: Border.all(color: AppColors.textFieldBorderColor)),
-      child: const Column(
+      child: Column(
         children: [
-          Row(
+          const Row(
             children: [
               SizedBox(width: 20),
-              Text(AppStrings.birthday),
+              Text(
+                AppStrings.birthday,
+                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
+              ),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SizedBox(width: 25),
-              Expanded(
+              const SizedBox(width: 45),
+              const Expanded(
                 child: TextField(
-                  decoration: InputDecoration(hintText: "Day"),
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                      hintText: AppStrings.day,
+                      focusedBorder: UnderlineInputBorder()),
                 ),
               ),
-              Expanded(
+              const SizedBox(width: 20),
+              Container(
+                height: 33,
+                width: 2,
+                color: AppColors.textFieldBorderColor,
+              ),
+              const SizedBox(width: 20),
+              const Expanded(
                 child: TextField(
-                  decoration: InputDecoration(hintText: "Day"),
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                      hintText: AppStrings.month,
+                      focusedBorder: UnderlineInputBorder()),
                 ),
               ),
-              Expanded(
+              const SizedBox(width: 20),
+              Container(
+                height: 33,
+                width: 2,
+                color: AppColors.textFieldBorderColor,
+              ),
+              const SizedBox(width: 20),
+              const Expanded(
                 child: TextField(
-                  decoration: InputDecoration(hintText: "Day"),
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                      hintText: AppStrings.year,
+                      focusedBorder: UnderlineInputBorder()),
                 ),
               ),
-              SizedBox(width: 25),
+              const SizedBox(width: 45),
             ],
-          )
+          ),
         ],
       ),
     );

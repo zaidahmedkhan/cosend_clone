@@ -21,18 +21,22 @@ class CustomTextfield extends StatelessWidget {
       constraints: BoxConstraints(minHeight: height, minWidth: width),
       child: TextField(
           decoration: InputDecoration(
-              prefixIcon: Container(
-                height: 64.51,
-                width: 60,
-                decoration: const BoxDecoration(
-                    border: Border(
-                        right:
-                            BorderSide(color: AppColors.textFieldBorderColor))),
-                child: Center(
-                  child: Image.asset(
-                    prefixIconPath,
-                    height: 24,
-                    width: 24,
+              contentPadding: const EdgeInsets.only(left: 10),
+              prefixIcon: Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child: Container(
+                  height: 64.51,
+                  width: 60,
+                  decoration: const BoxDecoration(
+                      border: Border(
+                          right: BorderSide(
+                              color: AppColors.textFieldBorderColor))),
+                  child: Center(
+                    child: Image.asset(
+                      prefixIconPath,
+                      height: 24,
+                      width: 24,
+                    ),
                   ),
                 ),
               ),
