@@ -14,6 +14,7 @@ class BirthdayTextField extends StatelessWidget {
           border: Border.all(color: AppColors.textFieldBorderColor)),
       child: Column(
         children: [
+          const SizedBox(height: 5),
           const Row(
             children: [
               SizedBox(width: 20),

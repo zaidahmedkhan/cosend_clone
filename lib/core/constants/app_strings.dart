@@ -4,6 +4,8 @@ class AppStrings {
   static const String month = "month";
   static const String year = "year";
   static const String login = "Log In";
+  static const String createProfile = "Create Profile";
   static const String dontHaveAnAccount = "Don't have an account?";
+  static const String alreadyHaveAnAccount = "Already have an account?";
   static const String createNow = "Create now";
 }
