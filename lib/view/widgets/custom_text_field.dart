@@ -5,7 +5,7 @@ class CustomTextfield extends StatelessWidget {
   const CustomTextfield(
       {super.key,
       required this.hintText,
-      required this.borderRadius,
+       this.borderRadius = 6,
       required this.prefixIconPath,
       this.height = 64.51,
       this.width = 396});
