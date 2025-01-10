@@ -1,16 +1,15 @@
 import 'package:cosend_clone/core/constants/app_assets.dart';
 import 'package:cosend_clone/core/constants/app_colors.dart';
 import 'package:cosend_clone/core/constants/app_strings.dart';
-import 'package:cosend_clone/view/screens/login_screen.dart';
-import 'package:cosend_clone/view/widgets/birthday_text_field.dart';
+import 'package:cosend_clone/view/screens/auth/signup_screen.dart';
+import 'package:cosend_clone/view/widgets/custom_bottom_nav_bar.dart';
 import 'package:cosend_clone/view/widgets/custom_button.dart';
 import 'package:cosend_clone/view/widgets/custom_text_field.dart';
-import 'package:cosend_clone/view/widgets/upload_photo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SignupScreen extends StatelessWidget {
-  const SignupScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +17,7 @@ class SignupScreen extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           title: Text(
-            AppStrings.createProfile,
+            AppStrings.login,
             style: TextStyle(
                 fontSize: 28.sp,
                 fontWeight: FontWeight.w500,
@@ -27,35 +26,23 @@ class SignupScreen extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 160),
             child: Column(
               children: [
-                const UploadPhotoWidget(),
-                SizedBox(height: 15.h),
-                const CustomTextfield(
-                    hintText: "Enter your name",
-                    prefixIconPath: AppImages.personIcon),
-                SizedBox(height: 10.h),
-                const CustomTextfield(
-                    hintText: "Enter your username",
-                    prefixIconPath: AppImages.userName),
-                SizedBox(height: 10.h),
                 const CustomTextfield(
                     hintText: "Enter your email",
                     prefixIconPath: AppImages.emailIcon),
-                SizedBox(height: 10.h),
-                const CustomTextfield(
-                    hintText: "Enter your location",
-                    prefixIconPath: AppImages.location),
-                SizedBox(height: 10.h),
-                const CustomTextfield(
-                    hintText: "Enter your password",
-                    prefixIconPath: AppImages.password),
                 SizedBox(height: 15.h),
-                const BirthdayTextField(),
-                const SizedBox(height: 65),
+                const CustomTextfield(
+                    hintText: "Password", prefixIconPath: AppImages.password),
+                SizedBox(height: 45.h),
                 CustomButton(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CustomBottomNavBar()));
+                  },
                   width: 396.w,
                   height: 64.51.h,
                   title: "Log In",
@@ -66,18 +53,20 @@ class SignupScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      AppStrings.alreadyHaveAnAccount,
+                      AppStrings.dontHaveAnAccount,
                       style: TextStyle(
                           fontSize: 12.sp, fontWeight: FontWeight.w400),
                     ),
                     SizedBox(width: 5.w),
                     GestureDetector(
-                      onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LoginScreen())),
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SignupScreen()));
+                      },
                       child: Text(
-                        AppStrings.login,
+                        AppStrings.createNow,
                         style: TextStyle(
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w400,

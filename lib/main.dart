@@ -1,4 +1,4 @@
-import 'package:cosend_clone/view/screens/login_screen.dart';
+import 'package:cosend_clone/view/screens/auth/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

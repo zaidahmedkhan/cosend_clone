@@ -1,10 +1,10 @@
 import 'package:cosend_clone/core/constants/app_assets.dart';
 import 'package:cosend_clone/core/constants/app_colors.dart';
-import 'package:cosend_clone/view/screens/add_events.dart';
-import 'package:cosend_clone/view/screens/chat_screen.dart';
-import 'package:cosend_clone/view/screens/favorites_screen.dart';
-import 'package:cosend_clone/view/screens/home_screen.dart';
-import 'package:cosend_clone/view/screens/profile_screen.dart';
+import 'package:cosend_clone/view/screens/bottom_nav_bar/add_events.dart';
+import 'package:cosend_clone/view/screens/bottom_nav_bar/chat_screen.dart';
+import 'package:cosend_clone/view/screens/bottom_nav_bar/favorites_screen.dart';
+import 'package:cosend_clone/view/screens/bottom_nav_bar/home_screen.dart';
+import 'package:cosend_clone/view/screens/bottom_nav_bar/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
