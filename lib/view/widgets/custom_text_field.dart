@@ -1,11 +1,12 @@
 import 'package:cosend_clone/core/constants/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextfield extends StatelessWidget {
   const CustomTextfield(
       {super.key,
       required this.hintText,
-       this.borderRadius = 6,
+      this.borderRadius = 6,
       required this.prefixIconPath,
       this.height = 64.51,
       this.width = 396});
@@ -21,9 +22,9 @@ class CustomTextfield extends StatelessWidget {
       constraints: BoxConstraints(minHeight: height, minWidth: width),
       child: TextField(
           decoration: InputDecoration(
-              contentPadding: const EdgeInsets.only(left: 10),
+              contentPadding: EdgeInsets.only(left: 10.w),
               prefixIcon: Padding(
-                padding: const EdgeInsets.only(right: 10),
+                padding: EdgeInsets.only(right: 10.w),
                 child: Container(
                   height: 64.51,
                   width: 60,
@@ -34,8 +35,8 @@ class CustomTextfield extends StatelessWidget {
                   child: Center(
                     child: Image.asset(
                       prefixIconPath,
-                      height: 24,
-                      width: 24,
+                      height: 24.h,
+                      width: 24.w,
                     ),
                   ),
                 ),
@@ -43,11 +44,11 @@ class CustomTextfield extends StatelessWidget {
               hintText: hintText,
               hintStyle: const TextStyle(color: AppColors.hintTextColor),
               enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(borderRadius),
+                  borderRadius: BorderRadius.circular(borderRadius.r),
                   borderSide:
                       const BorderSide(color: AppColors.textFieldBorderColor)),
               focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(borderRadius),
+                  borderRadius: BorderRadius.circular(borderRadius.r),
                   borderSide: const BorderSide(
                       color: AppColors.textFieldBorderColor)))),
     );

@@ -6,8 +6,8 @@ import 'package:cosend_clone/view/widgets/birthday_text_field.dart';
 import 'package:cosend_clone/view/widgets/custom_button.dart';
 import 'package:cosend_clone/view/widgets/custom_text_field.dart';
 import 'package:cosend_clone/view/widgets/upload_photo.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -17,69 +17,69 @@ class SignupScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text(
+          title: Text(
             AppStrings.createProfile,
             style: TextStyle(
-                fontSize: 28,
+                fontSize: 28.sp,
                 fontWeight: FontWeight.w500,
                 color: AppColors.darkPink),
           ),
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+            padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
             child: Column(
               children: [
                 const UploadPhotoWidget(),
-                const SizedBox(height: 15),
+                SizedBox(height: 15.h),
                 const CustomTextfield(
                     hintText: "Enter your name",
                     prefixIconPath: AppImages.personIcon),
-                const SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 const CustomTextfield(
                     hintText: "Enter your username",
                     prefixIconPath: AppImages.userName),
-                const SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 const CustomTextfield(
                     hintText: "Enter your email",
                     prefixIconPath: AppImages.emailIcon),
-                const SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 const CustomTextfield(
                     hintText: "Enter your location",
                     prefixIconPath: AppImages.location),
-                const SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 const CustomTextfield(
                     hintText: "Enter your password",
                     prefixIconPath: AppImages.password),
-                const SizedBox(height: 15),
+                SizedBox(height: 15.h),
                 const BirthdayTextField(),
                 const SizedBox(height: 65),
                 CustomButton(
                   onTap: () {},
-                  width: 396,
-                  height: 64.51,
+                  width: 396.w,
+                  height: 64.51.h,
                   title: "Log In",
                   textColor: AppColors.whiteColor,
                 ),
-                const SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       AppStrings.alreadyHaveAnAccount,
-                      style:
-                          TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
+                      style: TextStyle(
+                          fontSize: 12.sp, fontWeight: FontWeight.w400),
                     ),
-                    const SizedBox(width: 5),
+                    SizedBox(width: 5.w),
                     GestureDetector(
                       onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
                               builder: (context) => const LoginScreen())),
-                      child: const Text(
+                      child: Text(
                         AppStrings.login,
                         style: TextStyle(
-                          fontSize: 12,
+                          fontSize: 12.sp,
                           fontWeight: FontWeight.w400,
                           color: AppColors.darkPink,
                         ),

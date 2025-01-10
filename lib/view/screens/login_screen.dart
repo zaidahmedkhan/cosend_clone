@@ -5,6 +5,7 @@ import 'package:cosend_clone/view/screens/signup_screen.dart';
 import 'package:cosend_clone/view/widgets/custom_button.dart';
 import 'package:cosend_clone/view/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -14,10 +15,10 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          title: const Text(
+          title: Text(
             AppStrings.login,
             style: TextStyle(
-                fontSize: 28,
+                fontSize: 28.sp,
                 fontWeight: FontWeight.w500,
                 color: AppColors.darkPink),
           ),
@@ -30,27 +31,27 @@ class LoginScreen extends StatelessWidget {
                 const CustomTextfield(
                     hintText: "Enter your email",
                     prefixIconPath: AppImages.emailIcon),
-                const SizedBox(height: 15),
+                SizedBox(height: 15.h),
                 const CustomTextfield(
                     hintText: "Password", prefixIconPath: AppImages.password),
-                const SizedBox(height: 45),
+                SizedBox(height: 45.h),
                 CustomButton(
                   onTap: () {},
-                  width: 396,
-                  height: 64.51,
+                  width: 396.w,
+                  height: 64.51.h,
                   title: "Log In",
                   textColor: AppColors.whiteColor,
                 ),
-                const SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Text(
+                    Text(
                       AppStrings.dontHaveAnAccount,
-                      style:
-                          TextStyle(fontSize: 12, fontWeight: FontWeight.w400),
+                      style: TextStyle(
+                          fontSize: 12.sp, fontWeight: FontWeight.w400),
                     ),
-                    const SizedBox(width: 5),
+                    SizedBox(width: 5.w),
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -58,10 +59,10 @@ class LoginScreen extends StatelessWidget {
                             MaterialPageRoute(
                                 builder: (context) => const SignupScreen()));
                       },
-                      child: const Text(
+                      child: Text(
                         AppStrings.createNow,
                         style: TextStyle(
-                          fontSize: 12,
+                          fontSize: 12.sp,
                           fontWeight: FontWeight.w400,
                           color: AppColors.darkPink,
                         ),

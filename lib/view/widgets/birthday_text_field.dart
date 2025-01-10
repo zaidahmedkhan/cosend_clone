@@ -1,6 +1,7 @@
 import 'package:cosend_clone/core/constants/app_colors.dart';
 import 'package:cosend_clone/core/constants/app_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BirthdayTextField extends StatelessWidget {
   const BirthdayTextField({super.key});
@@ -8,26 +9,26 @@ class BirthdayTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 396,
-      height: 78,
+      width: 396.w,
+      height: 95.h,
       decoration: BoxDecoration(
           border: Border.all(color: AppColors.textFieldBorderColor)),
       child: Column(
         children: [
-          const SizedBox(height: 5),
-          const Row(
+          SizedBox(height: 5.h),
+          Row(
             children: [
-              SizedBox(width: 20),
+              SizedBox(width: 20.w),
               Text(
                 AppStrings.birthday,
-                style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
+                style: TextStyle(fontSize: 12.sp, fontWeight: FontWeight.w700),
               ),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const SizedBox(width: 45),
+              SizedBox(width: 40.w),
               const Expanded(
                 child: TextField(
                   textAlign: TextAlign.center,
@@ -36,13 +37,13 @@ class BirthdayTextField extends StatelessWidget {
                       focusedBorder: UnderlineInputBorder()),
                 ),
               ),
-              const SizedBox(width: 20),
+              SizedBox(width: 20.w),
               Container(
-                height: 33,
-                width: 2,
+                height: 33.h,
+                width: 2.w,
                 color: AppColors.textFieldBorderColor,
               ),
-              const SizedBox(width: 20),
+              SizedBox(width: 20.w),
               const Expanded(
                 child: TextField(
                   textAlign: TextAlign.center,
@@ -51,13 +52,13 @@ class BirthdayTextField extends StatelessWidget {
                       focusedBorder: UnderlineInputBorder()),
                 ),
               ),
-              const SizedBox(width: 20),
+              SizedBox(width: 20.w),
               Container(
-                height: 33,
-                width: 2,
+                height: 33.h,
+                width: 2.w,
                 color: AppColors.textFieldBorderColor,
               ),
-              const SizedBox(width: 20),
+              SizedBox(width: 20.w),
               const Expanded(
                 child: TextField(
                   textAlign: TextAlign.center,
@@ -66,7 +67,7 @@ class BirthdayTextField extends StatelessWidget {
                       focusedBorder: UnderlineInputBorder()),
                 ),
               ),
-              const SizedBox(width: 45),
+              SizedBox(width: 40.w),
             ],
           ),
         ],
