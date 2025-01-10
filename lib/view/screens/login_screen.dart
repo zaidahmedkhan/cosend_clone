@@ -2,6 +2,7 @@ import 'package:cosend_clone/core/constants/app_assets.dart';
 import 'package:cosend_clone/core/constants/app_colors.dart';
 import 'package:cosend_clone/core/constants/app_strings.dart';
 import 'package:cosend_clone/view/screens/signup_screen.dart';
+import 'package:cosend_clone/view/widgets/custom_bottom_nav_bar.dart';
 import 'package:cosend_clone/view/widgets/custom_button.dart';
 import 'package:cosend_clone/view/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +37,12 @@ class LoginScreen extends StatelessWidget {
                     hintText: "Password", prefixIconPath: AppImages.password),
                 SizedBox(height: 45.h),
                 CustomButton(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CustomBottomNavBar()));
+                  },
                   width: 396.w,
                   height: 64.51.h,
                   title: "Log In",
